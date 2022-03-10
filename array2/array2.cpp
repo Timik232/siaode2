@@ -1,7 +1,7 @@
 ﻿
 #include <iostream>
 using namespace std;
-void Input(int a[][100], int n, int m)
+void Input(int a[][100], int n, int m) //ввод значений
 {
     cout << "Enter " << n << " x " << m << " numbers\n";
     for (int i = 0; i < n; i++)
@@ -10,7 +10,7 @@ void Input(int a[][100], int n, int m)
             cin >> a[i][j];
     }
 }
-void Output(int a[][100], int n, int m)
+void Output(int a[][100], int n, int m) //вывод матрицы
 {
     for (int i = 0; i < n; i++)
     {
@@ -19,7 +19,7 @@ void Output(int a[][100], int n, int m)
         cout << endl;
     }
 }
-int min(int a[][100], int n, int m)
+int min(int a[][100], int n, int m) //нахождение минимального и перестановка
 {
     int minin = 999999;
     int nomer1, nomer2;
@@ -33,7 +33,7 @@ int min(int a[][100], int n, int m)
                 nomer2 = j;
             }
     }
-    for (int i = nomer1; i > 0; i--)
+    for (int i = nomer1; i > 0; i--) //перестановка
     {
         for (int j = 0; j < m; j++)
             swap(a[i][j], a[i - 1][j]);
