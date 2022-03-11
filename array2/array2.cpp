@@ -1,7 +1,8 @@
-﻿
+﻿#define c1 = 100
+#define c2 = 100
 #include <iostream>
 using namespace std;
-void Input(int a[][100], int n, int m) //ввод значений
+void Input(int a[][c2], int n, int m) //ввод значений
 {
     cout << "Enter " << n << " x " << m << " numbers\n";
     for (int i = 0; i < n; i++)
@@ -10,7 +11,7 @@ void Input(int a[][100], int n, int m) //ввод значений
             cin >> a[i][j];
     }
 }
-void Output(int a[][100], int n, int m) //вывод матрицы
+void Output(int a[][c2], int n, int m) //вывод матрицы
 {
     for (int i = 0; i < n; i++)
     {
@@ -19,7 +20,7 @@ void Output(int a[][100], int n, int m) //вывод матрицы
         cout << endl;
     }
 }
-int min(int a[][100], int n, int m) //нахождение минимального и перестановка
+int min(int a[][c2], int n, int m) //нахождение минимального и перестановка
 {
     int minin = 999999;
     int nomer1, nomer2;
@@ -47,7 +48,7 @@ int min(int a[][100], int n, int m) //нахождение минимально�
 }
 int main()
 {
-    int a[100][100];
+    int a[c1][c2];
     cout << "Enter NxM size of array\n";
     int n,m;
     cin >> n >> m;
